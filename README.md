@@ -23,7 +23,7 @@ Role-Based Access Control (RBAC) – Protect endpoints based on user roles like 
 
 Setup
 
-git clone https://github.com/Lawrence-001/member_API.git
+git clone the repo
 cd member_API
 
 
