@@ -1,6 +1,6 @@
 .NET 8 Web API
 
-This is a clean, modular .NET 8 Web API project that demonstrates development practices including RESTful design, EF Core integration, authentication with JWT, and role-based authorization.
+This is a .NET 8 Web API project that demonstrates development practices including RESTful design, EF Core integration, authentication with JWT, and role-based authorization.
 
 Key concepts
 
