@@ -22,22 +22,30 @@ Role-Based Access Control (RBAC) – Protect endpoints based on user roles like 
 
 
 Setup
-
+```bash
 git clone https://github.com/Lawrence-001/member_API.git
 cd member_API
+```
 
-
+```bash
 Restore packages
 dotnet restore
+```
 
+```bash
 Setup database
 Ensure your database connection string is set in appsettings.json
+```
 
+```bash
 Apply migration
 dotnet ef database update
+```
 
+```bash
 Run the project
 dotnet run
+```
 
 
 
