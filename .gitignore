@@ -1,0 +1,45 @@
+# Ignore Visual Studio temp files, build results, and personal settings
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+out/
+
+# NuGet packages (optional — unless you want to commit them)
+*.nupkg
+packages/
+
+# MSTest test Results
+TestResults/
+
+# NCrunch
+.ncrunch*
+*.ncrunchproject
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# StyleCop
+StyleCopReport.xml
+
+# Files built by Visual Studio
+Generated\ Files/
+
+# Backup & log files
+*.log
+*.bak
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider IDE
+.idea/
