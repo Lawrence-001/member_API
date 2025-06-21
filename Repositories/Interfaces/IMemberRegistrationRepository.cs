@@ -4,10 +4,10 @@ namespace MemberTestAPI.Repositories.Interfaces
 {
     public interface IMemberRegistrationRepository
     {
-        Task<MemberRegistration> CreateRegistration(MemberRegistration idpregistration);
-        Task<MemberRegistration> UpdateRegistration(int RegistrationId, MemberRegistration idpregistration);
-        void DeleteRegistration(int RegistrationId);
-        Task<MemberRegistration?> GetRegistrationById(int RegistrationId);
+        Task<MemberRegistration> CreateRegistration(MemberRegistration memberRegistration);
+        Task<MemberRegistration> UpdateRegistration(int RegistrationId, MemberRegistration memberRegistration);
+        Task<bool> DeleteRegistration(int registrationId);
+        Task<MemberRegistration> GetRegistrationById(int registrationId);
         Task<IEnumerable<MemberRegistration>> GetAllRegistrations();
     }
 }
