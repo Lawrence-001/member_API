@@ -53,7 +53,6 @@ namespace MemberTestAPI.Repositories.Implementation
             var reg_update = await _context.MemberRegistrations.FirstOrDefaultAsync(x => x.RegistrationId == registrationId);
             if (reg_update != null)
             {
-                reg_update.RegistrationId = registrationId;
                 reg_update.FullName = memberRegistration.FullName;
                 reg_update.NationalId = memberRegistration.NationalId;
                 reg_update.DOB = memberRegistration.DOB;
