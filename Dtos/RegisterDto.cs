@@ -9,14 +9,9 @@ namespace MemberTestAPI.Dtos
         [Display(Name = "Full Name")]
         public string FullName { get; set; } = string.Empty;
 
-        [Required]
-        [EmailAddress]
+        [Required, EmailAddress]
         [Remote(action: "IsEmailTaken", controller: "Auth")]
         public string Email { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = "Phone number is required")]
-        [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
@@ -27,6 +22,8 @@ namespace MemberTestAPI.Dtos
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "Password and confirm password do not match")]
         public string ConfirmPassword { get; set; } = string.Empty;
+
+        public List<string> Roles { get; set; } = new();
 
     }
 }

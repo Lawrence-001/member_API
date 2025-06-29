@@ -1,5 +1,4 @@
-﻿using MemberTestAPI.Enums;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace MemberTestAPI.Models

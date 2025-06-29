@@ -21,7 +21,7 @@ namespace MemberTestAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Registrations()
+        public async Task<IActionResult> GetAllRegistrations()
         {
             return Ok(await _memberRegistrationRepository.GetAllRegistrations());
         }
@@ -39,7 +39,7 @@ namespace MemberTestAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddIDPRegistration([FromBody] CreateMemberRegistrationDto createMemberRegistrationDto)
+        public async Task<IActionResult> AddMemberRegistration([FromBody] CreateMemberRegistrationDto createMemberRegistrationDto)
         {
             if (createMemberRegistrationDto != null)
             {
@@ -57,10 +57,10 @@ namespace MemberTestAPI.Controllers
             var reg_member = await _memberRegistrationRepository.GetRegistrationById(registrationId);
             if (reg_member != null)
             {
-                //var idp_to_update = _mapper.Map<IDPRegistration>(updateRegistrationDto);
+                //var member_to_update = _mapper.Map<MemberRegistration>(updateRegistrationDto);
 
                 _mapper.Map(updateMemberRegistrationDto, reg_member); //Merges new data into existing object
-                //await _iDPRepository.UpdateRegistration(registrationId, idp_to_update);
+                //await _memberRepository.UpdateRegistration(registrationId, member_to_update);
                 await _memberRegistrationRepository.UpdateRegistration(registrationId, reg_member);
                 return NoContent();
             }
@@ -73,7 +73,7 @@ namespace MemberTestAPI.Controllers
             var reg_to_delete = await _memberRegistrationRepository.GetRegistrationById(registrationId);
             if (reg_to_delete != null)
             {
-                _memberRegistrationRepository.DeleteRegistration(registrationId);
+                await _memberRegistrationRepository.DeleteRegistration(registrationId);
                 return NoContent();
             }
             return NotFound();

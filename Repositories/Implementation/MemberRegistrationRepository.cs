@@ -45,7 +45,7 @@ namespace MemberTestAPI.Repositories.Implementation
             {
                 return reg;
             }
-            throw new Exception($"Registration with Id {registrationId} doe not exist.");
+            throw new ArgumentException($"Registration with Id {registrationId} does not exist.");
         }
 
         public async Task<MemberRegistration> UpdateRegistration(int registrationId, MemberRegistration memberRegistration)
